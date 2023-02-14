@@ -12,21 +12,19 @@ class Car:
         return self._color
 
     @color.setter
-    def color(self,value):
+    def color(self, value):
         if isinstance(value, str):
             self._color = value
         else:
             raise TypeError("Invalid Type")
 
-
     @color.deleter
     def color(self):
         raise AttributeError("Attribute cannot be deleted")
 
-
     # def drive(self, number):
     #     self.milage += number
-        # return f"The {self.color} car has {self.milage:,} miles"
+    # return f"The {self.color} car has {self.milage:,} miles"
 
 
 # toyota = Car("Black",0)
@@ -37,4 +35,6 @@ benz = Car("Camry", 20000)
 print(benz.color)
 benz.color = "blue"
 print(benz.color)
+
+
 # print(volvo)
